@@ -41,10 +41,12 @@ window.onload = function () {
 }
 
 function searchMovie() {
-    let target = document.getElementById("input_search").value;
+    let target = '';
+    target = document.getElementById("input_search").value;
     console.log(target);
-    target = target.toString();
-    console.log(target);
+
+    let fetch_url = `https://api.themoviedb.org/3/search/movie?query=${target}&api_key=fa358c2e1d411f8ea7bc3e83b1552ccf`;
+    console.log(fetch_url);
 
     const options = {
         method: 'GET',
@@ -53,8 +55,8 @@ function searchMovie() {
             Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYTM1OGMyZTFkNDExZjhlYTdiYzNlODNiMTU1MmNjZiIsInN1YiI6IjY2MjlmZTMxZjcwNmRlMDExZjRmZGQ3OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CuaQoR0S4oo5lny0tSRCC7p-siuCDsw9zZjwkKA1yiM'
         }
     };
-    
-    fetch(`'https://api.themoviedb.org/3/search/movie?query=${target}&api_key=fa358c2e1d411f8ea7bc3e83b1552ccf'`, options)
+
+    fetch(fetch_url, options)
         .then(response => response.json())
         .then(data => {
             console.log(data);
