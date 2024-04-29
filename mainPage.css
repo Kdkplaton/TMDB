@@ -1,0 +1,45 @@
+* {
+    font-family: "Jua", sans-serif;
+}
+
+body {
+    background-color: #333333;
+}
+
+#jumbotron {
+    
+
+    margin: 20px auto 20px auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#jumbotron #top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#jumbotron #bottom{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#input_search {
+    min-width: 300px;
+    width: 400px;
+    
+}
+
+#cards {
+    padding: auto;
+}
+
+#review-button {
+    width: 100%;
+}
